@@ -2,6 +2,9 @@ import openpyxl
 from openpyxl import load_workbook
 from openpyxl.worksheet.datavalidation import DataValidation
 
+# Commiting to branch 2 
+
+
 def vlookup(lookup_value,  return_column_index, ws, lookup_range): 
 
     if type(lookup_value) == str:
@@ -47,9 +50,7 @@ for row in ws_source[range_address]:
         ws_dest['B' + str(row[0].row)] = row[0].value
         ws_dest['C' + str(row[0].row)] = row[1].value
         ws_dest['E' + str(row[0].row)] = row[2].value
-        if row[0].row >= 10:
-            # exit loop
-            break
+        
 
 
 # get the named range called 'albums' in this workbook
